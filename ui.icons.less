@@ -1,0 +1,116 @@
+.icon-search(@color) {
+	z-index: 1;
+	transform: rotate(34deg);
+	&:before {
+		top: 8px;
+		content: '';
+		overflow: hidden;
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		border-radius: 100%;
+		border: 3px solid @color;
+	}
+	&:after {
+		content: '';
+		overflow: hidden;
+		position: absolute;
+		width: 8px;
+		height: 3px;
+		top: 8+8px;
+		left: 17px;
+		background-color: @color;
+		border-radius:6px;
+	}
+}
+
+.icon-plus(@color,@background, @rotation: 0, @minus: false ) {
+	transform: rotate(@rotation);
+	border-radius: 100%;
+	background-color: @background;
+	width: 24px;
+	height: 24px;
+	&:after {
+		left: 6px;
+		top: 11px;
+		content: '';
+		width: 12px;
+		height: 2px;
+		background-color: @color;
+		position: absolute;
+	}
+	
+	& when (@minus = false ) {
+		&:before {
+			content: '';
+			height: 12px;
+			width: 2px;
+			top: 6px;
+			left: 11px;
+			background-color: @color;
+			position: absolute;
+			
+		}
+	}
+}
+
+.icon-minus(@color,@background) {
+	.icon-plus(@color,@background, 45deg, true);
+}
+
+.icon-clear(@color,@background) {
+	.icon-plus(@color,@background, 45deg);
+}
+
+.icon-next() {
+	width: 12px;
+	height: 12px;
+	transform: rotate(45deg);
+	&:before {
+		content:'';
+		top: 0; 
+		right: 0;
+		content:'';
+		position: absolute;
+		width: 12px;
+		height:3px;
+		background-color:@grey80; 
+	}
+	&:after {
+		content:'';
+		top: 0; 
+		right: 0;
+		position: absolute;
+		width: 3px;
+		height:12px;
+		background-color:@grey80; 
+	}
+}
+
+.icon-more() {
+	
+	background: @grey40;
+	border-radius: 100%;
+	width: 6px; 
+	height: 6px;
+	margin-right: 26px;
+	&:before {
+		content:'';
+		position: absolute;
+		width: 6px; 
+		height: 6px;
+		left: 10px;
+		background: @grey40;
+		border-radius: 100%;
+		
+	}
+	&:after {
+		content:'';
+		background: @grey40;
+		position: absolute;
+		border-radius: 100%;
+		width: 6px; 
+		height: 6px;
+		left: 20px;
+	}
+}

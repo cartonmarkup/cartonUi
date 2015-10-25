@@ -1,0 +1,25 @@
+{
+  "name": "cartonUi",
+  "homepage": "https://github.com/cartonmarkup/cartonUi",
+  "authors": [
+    "Mathias Prinz <mathias_prinz@me.com>"
+  ],
+  "description": "",
+  "main": "ui.less",
+  "moduleType": [],
+  "keywords": [
+    "less",
+    "css",
+    "responsive"
+  ],
+  "license": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "samples"
+  ]
+}
